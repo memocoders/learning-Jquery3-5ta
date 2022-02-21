@@ -1,0 +1,2 @@
+# learning-Jquery3-5ta
+Los cambios introducidos en jQuery 3 son bastante sutiles en comparación con los cambios introducidos en jQuery 2. La mayor parte de lo que ha cambiado está bajo el capó. Echemos un breve vistazo a algunos cambios y cómo es probable que impacten en un proyecto jQuery existente. Puede revisar los detalles detallados ( https://jquery.com/upgrade-guide/3.0 ) mientras lee este libro.
