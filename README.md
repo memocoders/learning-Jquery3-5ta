@@ -1,9 +1,35 @@
-# El alcance de JQuery
+# Jquery
+jQuery es una biblioteca de JavaScript rápida, pequeña y rica en funciones. Hace que cosas como el recorrido y la manipulación de documentos HTML, el manejo de eventos, la animación y Ajax sean mucho más simples con una API fácil de usar que funciona en una multitud de navegadores. Con una combinación de versatilidad y extensibilidad, jQuery ha cambiado la forma en que millones de personas escriben JavaScript.
 
-Con el resurgimiento del interés en HTML dinámico viene una proliferación de marcos de JavaScript. Para mantener la amplia gama de funciones, jQuery emplea varias estrategias:
 
-- __Aproveche el conocimiento de CSS :__ al basar el mecanismo para ubicar elementos de página en selectores de CSS, jQuery hereda una forma concisa pero legible de expresar la estructura de un documento. La biblioteca jQuery se convierte en un punto de entrada para los diseñadores que desean agregar comportamientos a sus páginas porque un requisito previo para realizar un desarrollo web profesional es el conocimiento de la sintaxis de CSS.
-- __Extensiones de soporte :__ para evitar el "arrastre de características", jQuery relega los usos de casos especiales a los complementos. El método para crear nuevos complementos es simple y está bien documentado, lo que ha estimulado el desarrollo de una amplia variedad de módulos ingeniosos y útiles. Incluso la mayoría de las funciones en la descarga básica de jQuery se realizan internamente a través de la arquitectura del complemento y se pueden eliminar si se desea, lo que produce una biblioteca aún más pequeña.
-- __Abstraiga las peculiaridades del navegador :__ Una desafortunada realidad del desarrollo web es que cada navegador tiene su propio conjunto de desviaciones de los estándares publicados. Una parte significativa de cualquier aplicación web puede quedar relegada a manejar funciones de manera diferente en cada plataforma. Si bien el panorama de los navegadores en constante evolución hace que una base de código perfectamente neutral para el navegador sea imposible para algunas características avanzadas, jQuery agrega una capa de abstracción que normaliza las tareas comunes, lo que reduce el tamaño del código y lo simplifica enormemente.
-- __Trabaje siempre con conjuntos :__ cuando le indicamos a jQuery que busque todos los elementos con la clase collapsibley los oculte, no es necesario recorrer cada elemento devuelto. En cambio, los métodos como .hide()están diseñados para funcionar automáticamente en conjuntos de objetos en lugar de en objetos individuales. Esta técnica, llamada iteración implícita , significa que muchas construcciones de bucle se vuelven innecesarias, lo que acorta considerablemente el código.
-- __Permita múltiples acciones en una línea ::: para evitar el uso excesivo de variables temporales o la repetición inútil, jQuery emplea un patrón de programación llamado encadenamiento para la mayoría de sus métodos. Esto significa que el resultado de la mayoría de las operaciones en un objeto es el objeto mismo, listo para que se le aplique la siguiente acción.
+## JQuery en acción
+La biblioteca jQuery proporciona una capa de abstracción de propósito general para secuencias de comandos web comunes y, por lo tanto, es útil en casi todas las situaciones de secuencias de comandos.En tanto sus características principales nos ayudan a realizar las siguientes tareas:
+
+- __Acceder a elementos en un documento :__ sin una biblioteca de JavaScript, los desarrolladores web a menudo necesitan escribir muchas líneas de código para recorrer el árbol del Modelo de objetos del documento ( DOM ) y ubicar partes específicas de la estructura de un documento HTML. Con jQuery, los desarrolladores tienen a su disposición un mecanismo de selección robusto y eficiente, lo que facilita la recuperación de la parte exacta del documento que debe inspeccionarse o manipularse.
+```
+$('div.contenido').find('p'); 
+```
+- __Modificar la apariencia de una página web :__ CSS ofrece un método poderoso para influir en la forma en que se representa un documento, pero se queda corto cuando no todos los navegadores web admiten los mismos estándares. Con jQuery, los desarrolladores pueden cerrar esta brecha, confiando en el mismo soporte de estándares en todos los navegadores. Además, jQuery puede cambiar las clases o las propiedades de estilo individuales aplicadas a una parte del documento, incluso después de que se haya renderizado la página.
+
+```
+$('ul > li:primero').addClass('activo'); 
+```
+- __Alterar el contenido de un documento :__ sin limitarse a meros cambios estéticos, jQuery puede modificar el contenido de un documento en sí mismo con unas pocas pulsaciones de teclas. El texto se puede cambiar, las imágenes se pueden insertar o intercambiar, las listas se pueden reordenar o la estructura completa del HTML se puede reescribir y ampliar, todo con una única interfaz de programación de aplicaciones ( API ) fácil de usar.
+
+```
+$('#contenedor').append('<a href="más.html">más</a>'); 
+```
+- __Responda a la interacción de un usuario :__ incluso los comportamientos más elaborados y poderosos no son útiles si no podemos controlar cuándo ocurren. La biblioteca jQuery ofrece una manera elegante de interceptar una amplia variedad de eventos, como un usuario que hace clic en un enlace, sin necesidad de saturar el código HTML con controladores de eventos.
+```
+$('botón.mostrar-detalles').click(() => { 
+  $('div.detalles').mostrar(); 
+});
+```
+- __Animar los cambios que se están realizando en un documento :__ para implementar de manera efectiva tales comportamientos interactivos, un diseñador también debe proporcionar comentarios visuales al usuario. La biblioteca jQuery facilita esto al proporcionar una variedad de efectos, como fundidos y borrados, así como un conjunto de herramientas para crear otros nuevos.
+```
+$('div.detalles').slideDown(); 
+```
+- __Recuperar información de un servidor sin actualizar una página :__ este patrón se conoce como Ajax , que originalmente significaba Asynchronous JavaScript and XML , pero desde entonces ha llegado a representar un conjunto mucho mayor de tecnologías para la comunicación entre el cliente y el servidor. La biblioteca jQuery elimina la complejidad específica del navegador de este proceso, lo que permite a los desarrolladores centrarse en la funcionalidad del lado del servidor.
+```
+$('div.detalles').load('más.html #contenido');
+```
