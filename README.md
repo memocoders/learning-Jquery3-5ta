@@ -1,6 +1,9 @@
 # Jquery
 jQuery es una biblioteca de JavaScript rápida, pequeña y rica en funciones. Hace que cosas como el recorrido y la manipulación de documentos HTML, el manejo de eventos, la animación y Ajax sean mucho más simples con una API fácil de usar que funciona en una multitud de navegadores. Con una combinación de versatilidad y extensibilidad, jQuery ha cambiado la forma en que millones de personas escriben JavaScript.
 
+> __Se desarrollo el libro de Packt Book o Oreilly__
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/Pj1GDV4/descarga.jpg" alt="descarga" border="0"></a> 
 
 ## JQuery en acción
 La biblioteca jQuery proporciona una capa de abstracción de propósito general para secuencias de comandos web comunes y, por lo tanto, es útil en casi todas las situaciones de secuencias de comandos.En tanto sus características principales nos ayudan a realizar las siguientes tareas:
